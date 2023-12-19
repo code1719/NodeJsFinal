@@ -1,5 +1,4 @@
 const mongodb = require("../db/connect");
-// const ObjectId = require("mongoose").objectId;
 const { ObjectId } = require("mongodb");
 
 // Get single student
@@ -79,7 +78,7 @@ const updateItem = async (req, res) => {
       .getDb()
       .db()
       .collection("items")
-      .replaceOne({ _id: userId }, item);
+      .replaceOne({ _id: itemId }, item);
     if (response.acknowledged) {
       res.status(204).json(response);
       console.log(response);
@@ -117,7 +116,6 @@ const deleteItem = async (req, res) => {
     }
   } catch (error) {
     res.status(500).json(error);
-    console.log(response);
   }
 };
 

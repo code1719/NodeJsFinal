@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const StudentController = require("../controllers/index");
+const ItemController = require("../controllers/index");
 
 router.get("/", ItemController.getAllItems);
 router.post("/", ItemController.createItem);
