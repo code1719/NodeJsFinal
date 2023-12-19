@@ -1,41 +1,27 @@
-### get tooele tech route
-GET http://localhost:3000/ttech HTTP/1.1
-
-### get the root path /
-GET http://localhost:3000/ HTTP/1.1
-
 ### get all students
-GET http://localhost:3000/students HTTP/1.1
+GET http://localhost:3000/items HTTP/1.1
 
 ### get one student
-GET http://localhost:3000/students/6578ae93d962af0dcc0c1b4b HTTP/1.1
+GET http://localhost:3000/items/6578ae93d962af0dcc0c1b4b HTTP/1.1
 
 ### create a student
-POST http://localhost:3000/students HTTP/1.1
+POST http://localhost:3000/items HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Phil",
-    "lastName" : "Reeves",
-    "email" : "browser@killer.com",
-    "age" : 34,
-    "currentCollege" : "Assassin's Academy"
+    "brand": "colgate",
+    "weight": "3oz"
 }
 
 ###update student
-PUT http://localhost:3000/students/657b591b6b304b9801fb8ea5 HTTP/1.1
+PUT http://localhost:3000/items/:id HTTP/1.1
 Content-Type: application/json
 
 {
-    "firstName": "Phil",
-    "lastName": "Collins",
-    "email": "tjam@less.com.com",
-    "age": 34,
-    "currentCollege": "Trader-Joe House of Comedy"
+    "brand": "colgate plus",
+    "weight": "1 lb"
 }
 
 ###delete student
-DELETE http://localhost:3000/students/657b591b6b304b9801fb8ea5 HTTP/1.1
+DELETE http://localhost:3000/items/:id HTTP/1.1
 
-### get the otherRoute /other
-# GET Http://localhost:3000/other HTTP/1.1
