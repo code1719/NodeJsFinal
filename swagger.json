@@ -5,7 +5,7 @@
     "description": "An API to show item data",
     "version": "1.0.0"
   },
-  "host": "https://itemapi.onrender.com",
+  "host": "itemapi.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
